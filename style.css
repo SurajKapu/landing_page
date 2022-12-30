@@ -1,0 +1,315 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Inter', sans-serif;;
+}
+
+/* tags */
+body {
+    background-color: black;
+}
+
+p {
+    line-height-step: 1px;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+img, input{
+    width: 100%;
+}
+
+/* Background and font */
+.bg-black {
+    background-color: black;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.font-white{
+    color: white;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Padding and margin */
+.pb-half {
+    padding-bottom: 0.5em;
+}
+.pb-1 {
+    padding-bottom: 1em;
+}
+
+.p-1 {
+    padding: 1em;
+}
+
+.p-2 {
+    padding: 2em;
+}
+
+.pt-3 {
+    padding-top: 3em;
+}
+
+.mb-1 {
+    margin-bottom: 1em;
+}
+
+.mb-half {
+    margin-bottom: 0.5em;
+}
+
+/* HEADER */
+header{
+    border-bottom: 1px solid white;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 1000;
+}
+
+header nav {
+    width: 100%;
+    padding: 1.25em;
+}
+
+.nav_left ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_right li{
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+nav li {
+    margin-right: 1em;
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+a {
+    color: white;
+}
+
+/* HERO SECTION */
+.hero_text {
+    font-weight: 600;
+    font-size: 70px;
+    margin: 1em 0 0.5em 0.5em;
+}
+
+.hero_image {
+    display: none;
+}
+
+.hero_content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.fade-in-text {
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    0% { 
+        opacity: 0; 
+    }
+    50% { 
+        opacity: 0.5; 
+    }
+    100% { 
+        opacity: 1; 
+    }
+  }
+
+.arrow_down {
+    font-size: 1.5rem;
+    transition-duration: 500ms;
+}
+
+.arrow_down:hover {
+    translate: 0px 10px;
+}
+
+/* ABOUT US */
+.about_us {
+    width: 100%;
+}
+
+.about_us img {
+    height: 450px;
+    width: 350px;
+}
+
+/* SERVICES */
+.service {
+    border: 1px solid black;
+    max-width: 400px;
+    margin: 1em auto;
+}
+
+.service:hover {
+    background-color: black;
+    color: white;
+    transition: all 300ms;
+    cursor: pointer;
+}
+
+/* CONTACT US */
+form {
+    padding-bottom: 3em;
+    max-width: 1200px;
+    margin: auto;
+}
+
+input {
+    height: 35px;
+    background-color: black;
+    border: 1px solid rgb(196, 190, 190);
+    margin-bottom: 1.2em;
+    color: white;
+}
+
+input[type=button] {
+    padding: 1em 3em;
+    width: fit-content;
+    background-color: white;
+    color: black;
+}
+
+input[type=button]:hover {
+    cursor: pointer;
+}
+
+#error {
+    display: none;
+    color: red;
+}
+
+@media screen and (min-width: 600px) {
+
+    .hero_content {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-around;
+        margin-top: 2.5em;
+        padding: 0 0 3em 0;
+    }
+
+    .hero_text {
+        font-size: 55px;
+        display: inline-block;
+    }
+
+    .hero_image {
+        display: block;
+        width: 350px;
+    }
+    
+    .nav_right ul{
+        display: block;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    header {
+        font-size: 18px;
+    }
+
+    .nav_right {
+        display: block;
+        text-align: center;
+    }
+    .nav_left #bars {
+        display: none;
+    }
+
+    nav, .nav_right  ul, .about_content {
+        display: flex;
+    }
+
+    .hero_text {
+        font-size: 80px;
+        margin: 1em 0 0 1em;
+    }
+
+    .hero_image {
+        display: block;
+        width: 500px;
+        height: 250px;
+    }
+
+    .nav_right {
+        display: block;
+        margin-left: auto;
+    }
+
+    .about_us {
+        height: 80 vh;
+        padding: 1em;
+    }
+
+    h1 {
+        text-align: left;
+    }
+
+    .about_us_right {
+        max-width: 700px;
+        font-size: 18px;
+    }
+    
+    .about_us img {
+        height: 500px;
+        width: 350px;
+        margin-right: min(50px,5em);
+    }
+
+    .about_content, .services_content {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .services_group {
+        margin: auto;
+        display: flex;
+        gap: 1em;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+    }
+
+    .service {
+        min-width: 380px;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    .hero_text {
+        font-size: 100px;
+        margin: 0.5em 0 0 0em;
+    }    
+}
+
+@media screen and (min-width: 1200px) {
+    .hero_text {
+        font-size: 125px;
+    }    
+}
